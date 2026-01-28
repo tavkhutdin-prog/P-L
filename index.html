@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Как составлять и читать P&L производственного предприятия</title>
-    <meta name="description" content="Одностраничный гид по P&L для начинающих финансистов и предпринимателей: структура, формулы, ошибки и мини-калькулятор.">
+    <meta name="description" content="Одностраничный гид по P&L для начинающих финансистов и предпринимателей: структура, формулы и ошибки.">
 
     <style>
         :root {
@@ -211,61 +211,6 @@
             font-family: "Inter", "Segoe UI", sans-serif;
         }
 
-        /* Calculator */
-        .calc-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 32px;
-        }
-
-        .calc-inputs {
-            display: grid;
-            gap: 16px;
-        }
-
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .input-group label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--muted);
-        }
-
-        .input-group input {
-            padding: 12px;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            font-size: 1rem;
-        }
-
-        .calc-results {
-            background: #0f172a;
-            color: #fff;
-            padding: 24px;
-            border-radius: var(--radius);
-        }
-
-        .result-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        .result-item:last-child {
-            border-bottom: none;
-        }
-
-        .result-val {
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-
         /* Mistakes */
         .mistake-list {
             padding-left: 20px;
@@ -308,7 +253,6 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .calc-wrapper { grid-template-columns: 1fr; }
             .hero { padding: 60px 0 40px; }
         }
     </style>
@@ -329,7 +273,6 @@
             <div class="nav-links">
                 <a href="#intro">Введение</a>
                 <a href="#structure">Структура</a>
-                <a href="#calculator">Калькулятор</a>
                 <a href="#errors">Ошибки</a>
                 <a href="#summary">Итог</a>
             </div>
@@ -453,74 +396,6 @@
             </div>
         </section>
 
-        <!-- Calculator -->
-        <section id="calculator">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Мини-калькулятор P&L</h2>
-                    <p>Введите данные и сразу получите ключевые показатели.</p>
-                </div>
-                <div class="card">
-                    <div class="calc-wrapper">
-                        <div class="calc-inputs">
-                            <div class="input-group">
-                                <label for="in-rev">Выручка</label>
-                                <input type="number" id="in-rev" value="1000000" min="0">
-                            </div>
-                            <div class="input-group">
-                                <label for="in-var">Переменные издержки</label>
-                                <input type="number" id="in-var" value="400000" min="0">
-                            </div>
-                            <div class="input-group">
-                                <label for="in-fix">Постоянные издержки</label>
-                                <input type="number" id="in-fix" value="250000" min="0">
-                            </div>
-                            <div class="input-group">
-                                <label for="in-da">Амортизация</label>
-                                <input type="number" id="in-da" value="50000" min="0">
-                            </div>
-                            <div class="input-group">
-                                <label for="in-int">Проценты</label>
-                                <input type="number" id="in-int" value="30000" min="0">
-                            </div>
-                            <div class="input-group">
-                                <label for="in-tax">Налоги</label>
-                                <input type="number" id="in-tax" value="40000" min="0">
-                            </div>
-                        </div>
-
-                        <div class="calc-results" aria-live="polite">
-                            <h3 style="margin-bottom: 10px;">Результаты</h3>
-                            <div class="result-item">
-                                <span>Маржинальный доход</span>
-                                <span class="result-val" id="res-md">0</span>
-                            </div>
-                            <div class="result-item">
-                                <span>EBITDA</span>
-                                <span class="result-val" id="res-ebitda">0</span>
-                            </div>
-                            <div class="result-item">
-                                <span>Чистая прибыль</span>
-                                <span class="result-val" id="res-net">0</span>
-                            </div>
-                            <div class="result-item">
-                                <span>Маржинальная рентабельность</span>
-                                <span class="result-val" id="res-margin">0%</span>
-                            </div>
-                            <div class="result-item">
-                                <span>EBITDA-маржа</span>
-                                <span class="result-val" id="res-ebitda-margin">0%</span>
-                            </div>
-                            <div class="result-item">
-                                <span>Рентабельность чистой прибыли</span>
-                                <span class="result-val" id="res-net-margin">0%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- J. Typical mistakes -->
         <section id="errors">
             <div class="container">
@@ -573,7 +448,6 @@
                 <div class="footer-links">
                     <a href="#intro">Введение</a>
                     <a href="#structure">Структура</a>
-                    <a href="#calculator">Калькулятор</a>
                     <a href="#errors">Ошибки</a>
                 </div>
             </div>
@@ -583,63 +457,5 @@
         </div>
     </footer>
 
-    <script>
-        // Мини-калькулятор P&L: пересчет результатов при каждом вводе
-        const formatCurrency = (value) => {
-            return new Intl.NumberFormat("ru-RU", {
-                style: "currency",
-                currency: "RUB",
-                maximumFractionDigits: 0
-            }).format(value);
-        };
-
-        const formatPercent = (value) => `${value.toFixed(1)}%`;
-
-        const inputs = {
-            revenue: document.getElementById("in-rev"),
-            variable: document.getElementById("in-var"),
-            fixed: document.getElementById("in-fix"),
-            depreciation: document.getElementById("in-da"),
-            interest: document.getElementById("in-int"),
-            taxes: document.getElementById("in-tax")
-        };
-
-        const outputs = {
-            margin: document.getElementById("res-md"),
-            ebitda: document.getElementById("res-ebitda"),
-            net: document.getElementById("res-net"),
-            marginRate: document.getElementById("res-margin"),
-            ebitdaRate: document.getElementById("res-ebitda-margin"),
-            netRate: document.getElementById("res-net-margin")
-        };
-
-        const calculate = () => {
-            const revenue = Number(inputs.revenue.value) || 0;
-            const variable = Number(inputs.variable.value) || 0;
-            const fixed = Number(inputs.fixed.value) || 0;
-            const depreciation = Number(inputs.depreciation.value) || 0;
-            const interest = Number(inputs.interest.value) || 0;
-            const taxes = Number(inputs.taxes.value) || 0;
-
-            const marginIncome = revenue - variable;
-            const ebitda = marginIncome - fixed;
-            const net = ebitda - depreciation - interest - taxes;
-
-            const safeDiv = (num, den) => (den === 0 ? 0 : (num / den) * 100);
-
-            outputs.margin.textContent = formatCurrency(marginIncome);
-            outputs.ebitda.textContent = formatCurrency(ebitda);
-            outputs.net.textContent = formatCurrency(net);
-            outputs.marginRate.textContent = formatPercent(safeDiv(marginIncome, revenue));
-            outputs.ebitdaRate.textContent = formatPercent(safeDiv(ebitda, revenue));
-            outputs.netRate.textContent = formatPercent(safeDiv(net, revenue));
-        };
-
-        Object.values(inputs).forEach((input) => {
-            input.addEventListener("input", calculate);
-        });
-
-        calculate();
-    </script>
 </body>
 </html>
